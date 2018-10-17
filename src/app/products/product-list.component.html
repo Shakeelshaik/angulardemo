@@ -1,0 +1,59 @@
+<div class="card bg-light" *ngFor="let prod of productList">
+  <div class="card-header bg-info">
+    <h3 class="card-title">{{prod.name}}</h3>
+    <button (click)="increment()">Increment</button>
+          <button (click)="decrement()">Decrement</button>
+          {{counter}}
+  </div>
+  <div class="card-body">
+    <div class="col-xs-10">
+      <div class="row">
+        <div class="col-xs-4">
+          <img [src]="prod.image" alt="" height="200" width="200">
+        </div>
+        <div class="col-xs-8">
+          <div class="">
+            <div class="col-xs-6">
+              Product Name:
+            </div>
+            <div class="col-xs-6">
+              {{prod.name}}
+            </div>
+          </div>
+          <div class="">
+              <div class="col-xs-6">
+                Product Description:
+              </div>
+              <div class="col-xs-6">
+                {{prod.desc}}
+              </div>
+            </div>
+            <div class=" ">
+                <div class="col-xs-6">
+                  Product Taste:
+                </div>
+                <div class="col-xs-6">
+                  {{prod.tasteType}}
+                </div>
+              </div>
+              <div class="">
+                  <div class="col-xs-6">
+                    Product Price:
+                  </div>
+                  <div class="col-xs-6">
+                    {{prod.price}}
+                  </div>
+              </div>
+              <div class="">
+                  <div class="col-xs-6">
+                    Product Type:
+                  </div>
+                  <div class="col-xs-6">
+                    {{prod.type}}
+                  </div>
+              </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
